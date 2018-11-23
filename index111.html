@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<title>晨光之家 - 在梦途中</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Access-Control-Allow-Origin"/>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.min.js"></script>
+</head>
+<body>
+<img src="http://ftp570532.host604.zhujiwu.me/1.jpg">
+
+
+
+
+
+<script>
+
+    $.ajax({
+        type: "get",
+        data: "q=Q",
+        url: "http://localhost/1.php",
+        dataType: "jsonp",
+        jsonp: "callback",
+        success: function(data) {
+            console.log(data);
+        },
+        error: function() {
+            console.log('Request Error.');
+        }
+    });
+
+
+
+   /*  $.ajax({
+            type:"GET",
+            url:"http://localhost/1.php", //访问的链接
+            data: "q=Q",
+            dataType:"jsonp",  //数据格式设置为jsonp
+            jsonp:"callback",  //Jquery生成验证参数的名称
+            success:function(data){  //成功的回调函数
+                console.log(data);
+            },
+            error: function (e) {
+                console.log("error");
+            }
+        }); */
+
+/* $.post("http://localhost/1.php",{"q":"A"},function(data){
+			  
+		}); */
+
+</script>
+</body>
+</html>
